@@ -1,0 +1,23 @@
+MARKET EXPECTATIONS FOR CENTRAL BANK COMMUNICATION (Based on Reuters Article from Aug 21):
+
+This is the baseline against which the AI measures incoming transcriptions from the Jackson Hole conference.
+
+1.  **INTEREST RATES:**
+    *   **Expectation:** The market is pricing in a ~70% probability of a 0.25% rate cut at the September meeting. However, Fed officials appear divided and mostly lukewarm, signaling a high degree of uncertainty. The baseline is a conflict between market hopes and official caution.
+    *   **Hawkish Signals (against a rate cut):** Emphasizing that inflation is "trending in the wrong direction," concern about the "inflation mentality," or stating there is "no case for reducing interest rates" with current data. Downplaying weak labor market data.
+    *   **Dovish Signals (for a rate cut):** Highlighting "worsening labor market conditions" as a primary risk. Suggesting it is "appropriate soon to begin dialing back" rates. Emphasizing weak hiring data and downward revisions.
+
+2.  **ECONOMIC OUTLOOK:**
+    *   **Expectation:** A conflicting economic picture. The labor market is showing signs of weakening (dovish), while inflation remains above the 2% target and recent data was unexpectedly high (hawkish). There is an active debate on whether the impact of tariffs on inflation will be temporary or persistent.
+    *   **Hawkish Signals:** Focusing on "unexpectedly high inflation data," especially in services. Expressing concern that tariffs could "touch off another bout of high inflation."
+    *   **Dovish Signals:** Focusing on "unexpectedly weak July hiring data" and downward revisions for previous months.
+
+3.  **FORWARD GUIDANCE (FROM JEROME POWELL'S SPEECH):**
+    *   **Expectation:** Investors are looking for "firm clues" about the September meeting. The baseline expectation is that Powell will not "decisively signal a September cut" but may make it clear he is "likely to support one." The overall guidance is expected to remain data-dependent.
+    *   **Hawkish Signals:** A speech that strongly emphasizes the risks of persistent inflation and the need to see more conclusive data before acting, creating doubt about a September cut.
+    *   **Dovish Signals:** A speech that clearly acknowledges the risks to the labor market and signals that the bar for a September cut is relatively low.
+
+4.  **OVERALL TONE:**
+    *   **Expectation:** Cautious, with officials highlighting two-sided risks (inflation vs. labor market). The general tone from the interviews is one of hesitation and a lack of consensus.
+    *   **Hawkish Signals:** A determined, worried tone regarding inflation being too high for too long.
+    *   **Dovish Signals:** A concerned tone regarding the health of the job market and the risk of a slowdown.

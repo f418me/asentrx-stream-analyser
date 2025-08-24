@@ -1,0 +1,12 @@
+# Requirements für die standalone Skripte
+# Stream Transcriber
+yt-dlp>=2024.1.0
+SpeechRecognition>=3.10.0
+
+# AI Analyzer  
+pydantic>=2.5.0
+pydantic-ai>=0.0.13
+bitfinex-api-py @ https://github.com/f418me/bitfinex-api-py.git
+
+# Optional: PyAudio für lokale Audio-Aufnahme (kann bei Installation-Problemen entfernt werden)
+pyaudio>=0.2.11

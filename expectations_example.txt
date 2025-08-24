@@ -1,0 +1,28 @@
+MARKET EXPECTATIONS FOR CENTRAL BANK COMMUNICATION:
+
+This is the baseline against which the AI measures incoming transcriptions.
+
+1.  **INTEREST RATES:**
+    *   **Expectation:** Interest rates will remain stable. The market does not expect a change at this meeting.
+    *   **Hawkish Signals (restrictive, tends to be bad for stocks/good for currency):** "further rate hikes necessary," "inflation risks remain high," "maintain a restrictive stance," "determination in fighting inflation."
+    *   **Dovish Signals (accommodative, tends to be good for stocks/bad for currency):** "considering a pause in rate hikes," "monetary policy easing possible," "economic growth needs support," "flexible response to data."
+
+2.  **BOND PURCHASES (QUANTITATIVE EASING/TIGHTENING):**
+    *   **Expectation:** The balance sheet reduction (Quantitative Tightening, QT) will continue at its current pace.
+    *   **Hawkish Signals:** "accelerating the balance sheet runoff," "liquidity will be further reduced."
+    *   **Dovish Signals:** "considering slowing down QT," "bond purchases could be resumed," "ensuring sufficient market liquidity."
+
+3.  **ECONOMIC OUTLOOK:**
+    *   **Expectation:** The forecast for economic growth is moderate; inflation is assessed as slightly declining.
+    *   **Hawkish Signals:** "robust economy," "overheated labor market," "persistent core inflation."
+    *   **Dovish Signals:** "significant economic slowdown," "rising recession risks," "inflation expectations are falling."
+
+4.  **FORWARD GUIDANCE:**
+    *   **Expectation:** The central bank will emphasize that future decisions are purely data-dependent and will not commit to a specific course.
+    *   **Hawkish Signals:** "we will do whatever it takes to bring inflation down," "further tightening is likely."
+    *   **Dovish Signals:** "we can be patient," "maintaining flexibility in future decisions."
+
+5.  **OVERALL TONE:**
+    *   **Expectation:** A neutral to slightly cautious, balanced tone.
+    *   **Hawkish Signals:** Determined, direct, concerned about inflation.
+    *   **Dovish Signals:** Cautious, deliberative, concerned about economic growth.
