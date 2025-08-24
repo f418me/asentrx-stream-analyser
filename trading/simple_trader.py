@@ -9,8 +9,32 @@ from typing import Optional
 from datetime import datetime
 import os
 from pathlib import Path
+import requests
+import json
 
 logger = logging.getLogger(__name__)
+
+
+def get_bitfinex_price(symbol: str) -> Optional[float]:
+    """
+    Fetches the last price for a given symbol from the Bitfinex API.
+
+    :param symbol: The trading symbol to fetch the price for (e.g., 'tBTCUSD').
+    :return: The last price as a float, or None if an error occurs.
+    """
+    url = f"https://api-pub.bitfinex.com/v2/ticker/{symbol}"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for bad status codes
+        data = response.json()
+        # The last price is the 7th element in the returned list
+        return float(data[6])
+    except requests.exceptions.RequestException as e:
+        logger.error(f"An error occurred: {e}")
+        return None
+    except (ValueError, IndexError) as e:
+        logger.error(f"Error parsing response: {e}")
+        return None
 
 
 class SimpleFedTrader:
@@ -75,6 +99,10 @@ class SimpleFedTrader:
     def execute_sentiment_trade(self, sentiment: str, confidence: float, reasoning: str, 
                               analysis_timestamp: str) -> Optional[dict]:
         """Execute a trade based on sentiment analysis."""
+        price = get_bitfinex_price(self.symbol)
+        if price:
+            self.save_price_log(price, sentiment, confidence)
+
         if not self.should_trade(sentiment, confidence):
             return None
             
@@ -149,6 +177,27 @@ class SimpleFedTrader:
                 "timestamp": datetime.now().isoformat()
             }
     
+    def save_price_log(self, price: float, sentiment: str, confidence: float, output_file: str = "price_log.txt"):
+        """Save price log to a file."""
+        try:
+            output_path = Path(output_file)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            with open(output_path, 'a', encoding='utf-8') as f:
+                log_entry = {
+                    "timestamp": datetime.now().isoformat(),
+                    "symbol": self.symbol,
+                    "price": price,
+                    "sentiment": sentiment,
+                    "confidence": confidence
+                }
+                f.write(json.dumps(log_entry) + '\n')
+
+            logger.info(f"Price logged to: {output_file}")
+            
+        except Exception as e:
+            logger.error(f"Error saving price log: {e}")
+
     def save_trade_log(self, trade_result: dict, output_file: str = "trade_results.jsonl"):
         """Save trade results to a log file."""
         try:
