@@ -13,6 +13,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from pydantic import BaseModel, Field
 from pydantic_ai import Agent
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Import trading functionality
 try:
@@ -68,7 +72,7 @@ class AIAnalyzer:
     """AI analyzer for sentiment analysis of transcribed texts."""
     
     def __init__(self, gemini_api_key: str, expectations_file: str = "expectations.txt", 
-                 model_name: str = "gemini-1.5-pro"):
+                 model_name: Optional[str] = None):
         """
         Args:
             gemini_api_key: API key for Gemini
@@ -77,7 +81,7 @@ class AIAnalyzer:
         """
         self.expectations_file = expectations_file
         self.expectations_text = self._load_expectations()
-        self.model_name = model_name
+        self.model_name = model_name or os.getenv('MODEL')
         
         # Set Gemini API key
         os.environ['GOOGLE_GENAI_API_KEY'] = gemini_api_key
@@ -385,7 +389,6 @@ async def main():
     expectations_file = os.getenv('EXPECTATIONS_FILE', 'expectations.txt')
     check_interval = float(os.getenv('CHECK_INTERVAL', '10.0'))
     analysis_mode = os.getenv('ANALYSIS_MODE', 'fulltext')  # 'fulltext' or 'incremental'
-    model_name = os.getenv('MODEL', 'gemini-1.5-pro')
     
     if not gemini_api_key:
         print("Error: GEMINI_API_KEY environment variable is required!")
@@ -394,10 +397,10 @@ async def main():
     
     try:
         # AI Analyzer initialisieren
-        analyzer = AIAnalyzer(gemini_api_key, expectations_file, model_name)
+        analyzer = AIAnalyzer(gemini_api_key, expectations_file)
         
         print(f"Starting AI analysis...")
-        print(f"Model: {model_name}")
+        print(f"Model: {analyzer.model_name}")
         print(f"Input file: {input_file}")
         print(f"Output file: {output_file}")
         print(f"Erwartungen: {expectations_file}")
